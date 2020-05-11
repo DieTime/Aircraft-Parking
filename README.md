@@ -1,18 +1,22 @@
 <p align="center">
-  <img src="https://i.ibb.co/Z1gJqpM/Group-22.png" width="250">
+  <img src="https://svgshare.com/i/L2u.svg" width="300">
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.2.0-red.svg?style=flat-square" alt="version">
+  <img src="https://img.shields.io/badge/version-1.0.0-r.svg?style=flat-square" alt="version">
 </p>
 
 # Aircraft Parking
-### Demo
-https://dietime.github.io/Aircraft-Parking/
+### About
+Web interface of the "AirHackathon 2020" project for visualization of optimal loading of hangars by date.
 
 ### Features
 - Convenient timeline
 - Date picker
 - Nice design
 
-### About
-Web interface of the "AirHackathon 2020" project for visualization of optimal loading of hangars by date.
+### Demo
+https://dietime.github.io/Aircraft-Parking/
+<p align="left">
+  <img src="https://i.ibb.co/W2XJ61d/image.png" width="600">
+</p>
+
