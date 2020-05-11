@@ -7,7 +7,7 @@
 
 # Aircraft Parking
 ### About
-Web interface of the "AirHackathon 2020" project for visualization of optimal loading of hangars by date.
+Web interface of the "АвиаХакатон 2020" project for visualization of optimal loading of hangars by date.
 
 ### Features
 - Convenient timeline
