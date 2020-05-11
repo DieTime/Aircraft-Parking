@@ -1,38 +1,55 @@
 .App {
-  text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.garage-label {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.window {
+    width: 1100px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.garage {
+    margin-bottom: 25px;
+    position: relative;
+    background: #F8F8F8;
+    border: 3px solid #ECECEC;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline {
+    position: relative;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+    margin: 0;
+    padding: 0 30px 0 30px;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+
+.data-picker {
+    position: absolute;
+    width: 100%;
+    bottom: 33px;
+    z-index: 3;
+}
+
+.fly {
+    position: absolute;
+}
+
+.garages {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 59px;
 }

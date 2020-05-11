@@ -1,26 +1,87 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Timeline from "./components/Timeline"
+import DateSlider from './components/DateSlider';
+import moment from "moment"
+import {createOptions, createTimelineData, newGarageData} from "./Data";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: null,
+      series: createTimelineData(),
+      options: createOptions(),
+      air: ["DME", "SVO", "VKO"]
+    }
+  }
 
-export default App;
+
+  render() {
+    return (
+      <div className="App">
+        <div className="window">
+          <div className="garages">
+            {/*Garage for drawing airplanes*/}
+            {this.state.air.map((item, index) => {
+              return (
+                <div key={index}>
+                  <p className="garage-label">{item}</p>
+                  <div className="garage inactive"
+                       style={{width: newGarageData[item].width, height: newGarageData[item].height}}>
+                    {/* eslint-disable-next-line array-callback-return */}
+                    {newGarageData[item].blocks.map((obj, index) => {
+                      let minTime = moment(obj.dates[0], 'YYYY-MM-DD')
+                      let maxTime = moment(obj.dates[1], 'YYYY-MM-DD')
+                      let currentTime = moment(this.state.date, '"DD.MM.YYYY"')
+
+                      if (currentTime >= minTime && currentTime <= maxTime)
+                        return (
+                          <div key={index} className="fly" style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            top: obj.y,
+                            left: obj.x,
+                            backgroundColor: obj.color,
+                            width: obj.w,
+                            height: obj.h
+                          }}>
+                            <p style={{
+                              textAlign: "center",
+                              color: "#ffffff",
+                              fontWeight: 500,
+                              fontSize: 16 * obj.h / 73.3
+                            }}>{obj.fly}</p>
+                          </div>)
+                    })}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          {/*Timeline*/}
+          <div className="timeline">
+            <Timeline series={this.state.series} options={this.state.options}/>
+
+            {/*Date slider picker*/}
+            <div className="data-picker">
+              <DateSlider
+                min={new Date('2020-08-15').getTime()}
+                max={new Date('2020-12-15').getTime()}
+                onChange={(event, value) => {
+                  let date = moment(new Date(value)).format("DD.MM.YYYY")
+                  this.setState({date})
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    );
+  }
+}
