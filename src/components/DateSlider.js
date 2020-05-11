@@ -54,7 +54,7 @@ export default function DateSlider({min, max, onChange}) {
       <Slider
         valueLabelFormat={(value) => moment(new Date(value)).format("DD.MM.YYYY")}
         ValueLabelComponent={ValueLabelComponent}
-        defaultValue={min}
+        defaultValue={(min + max) / 2}
         min={min}
         max={max}
         onChange={onChange}

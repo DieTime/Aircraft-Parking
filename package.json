@@ -1,7 +1,7 @@
 {
   "name": "aircraft-parking",
   "version": "0.1.0",
-  "homepage": "./",
+  "homepage": "http://DieTime.github.io/Aircraft-Parking",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.13",
@@ -16,7 +16,7 @@
     "react-scripts": "^3.4.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

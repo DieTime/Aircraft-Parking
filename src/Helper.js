@@ -1,6 +1,13 @@
 import moment from "moment";
 import ru from "apexcharts/dist/locales/ru.json"
 
+export const minDate = new Date('2020-08-15').getTime()
+export const maxDate = new Date('2020-12-15').getTime()
+
+export function getAvgDate(min, max) {
+  return moment(new Date((min+ max) / 2)).format("DD.MM.YYYY")
+}
+
 export const newGarageData = {
   'DME': {
     'width': 300,
