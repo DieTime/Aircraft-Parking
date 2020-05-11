@@ -17,6 +17,6 @@ Web interface of the "AirHackathon 2020" project for visualization of optimal lo
 ### Demo
 https://dietime.github.io/Aircraft-Parking/
 <p align="left">
-  <img src="https://i.ibb.co/W2XJ61d/image.png" width="600">
+  <img src="https://i.ibb.co/W2XJ61d/image.png" width="800">
 </p>
 
