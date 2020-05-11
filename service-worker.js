@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Aircraft-Parking/precache-manifest.e5d62be70c1b7c8e273d7e25c3016b58.js"
+  "/Aircraft-Parking/precache-manifest.352c78a2d92d98cfd752b9a8a0173995.js"
 );
 
 self.addEventListener('message', (event) => {
